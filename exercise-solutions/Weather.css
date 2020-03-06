@@ -1,0 +1,11 @@
+.Weather--sunny {
+  background-color: khaki;
+}
+
+.Weather--cloudy {
+  background-color: #eee;
+}
+
+.Weather--rainy {
+  background-color: lightblue;
+}
