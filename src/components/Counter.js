@@ -24,8 +24,13 @@ class Counter extends Component {
   }
 
   render() {
+    let additionClass = "";
+    if (this.state.count < 0) {
+      additionClass = " negative";
+    }
+
     return (
-      <div className="Counter">
+      <div className={"Counter" + additionClass}>
         <p>{this.state.count}</p>
         <div>
           <button onClick={() => this.handleCount(-1)}>Down</button>

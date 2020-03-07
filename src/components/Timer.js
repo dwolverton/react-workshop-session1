@@ -18,10 +18,15 @@ class Timer extends Component {
 
   handleStop = () => {
     clearInterval(this.interval); // stop the ticking!
+    this.setState({startTime: null});
   }
 
   timerTick = () => {
-    console.log('tick');
+    this.setState(prev => {
+      let elapsed = new Date().getTime() - prev.startTime.getTime();
+      elapsed = Math.round(elapsed / 1000);
+      return { elapsed };
+    });
   }
 
   render() {
@@ -38,7 +43,7 @@ class Timer extends Component {
         <p><label>Elapsed</label> {this.state.elapsed}s </p>
         <p>
           <button onClick={this.handleStart}>Start</button>
-          <button>Stop</button>
+          <button onClick={this.handleStop}>Stop</button>
         </p>
       </div>
     );
