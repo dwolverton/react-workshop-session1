@@ -1,0 +1,32 @@
+.Votes {
+  display: inline-block;
+  border: 2px solid palevioletred;
+  padding: 4px;
+  margin: 4px;
+}
+
+.Votes label {
+  font-weight: bold;
+  display: inline-block;
+  width: 6em;
+}
+
+.Votes p {
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.Votes__bar {
+  height: 4px;
+  margin-bottom: 10px;
+}
+
+.Votes__bar--chocolate {
+  background-color: Sienna;
+}
+.Votes__bar--vanilla {
+  background-color: Silver;
+}
+.Votes__bar--strawberry {
+  background-color: LightCoral;
+}
