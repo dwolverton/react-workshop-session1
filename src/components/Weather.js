@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './Weather.css';
+import WeatherImage from './WeatherImage';
 
 class Weather extends Component {
 
   render() {
     return (
       <div className={"Weather box Weather--" + this.props.conditions.toLowerCase()}>
-        <p>{this.props.conditions}</p>
+        <p><WeatherImage conditions={this.props.conditions}/>  {this.props.conditions}</p>
         <p>
           <label>High</label> {this.props.highF}F ({fahrenheitToCelsius(this.props.highF)}C)
           {' '}
