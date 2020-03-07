@@ -4,7 +4,7 @@ import './Counter.css';
 class Counter extends Component {
 
   state = {
-    count: 14
+    count: 2
   }
 
   handleReset = () => {
@@ -34,7 +34,8 @@ class Counter extends Component {
         <p>{this.state.count}</p>
         <div>
           <button onClick={() => this.handleCount(-1)}>Down</button>
-          <button onClick={this.handleReset}>Reset</button>
+          { this.state.count !== 0 &&
+                  <button onClick={this.handleReset}>Reset</button> }
           <button onClick={this.handleUp}>Up</button>
         </div>
       </div>

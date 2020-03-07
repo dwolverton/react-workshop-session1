@@ -42,8 +42,9 @@ class Timer extends Component {
         <p><label>Start Time:</label> {startTime} </p>
         <p><label>Elapsed</label> {this.state.elapsed}s </p>
         <p>
-          <button onClick={this.handleStart}>Start</button>
-          <button onClick={this.handleStop}>Stop</button>
+          { this.state.startTime === null ?
+            <button onClick={this.handleStart}>Start</button> :
+            <button onClick={this.handleStop}>Stop</button> }
         </p>
       </div>
     );
