@@ -17,12 +17,18 @@ class Counter extends Component {
     });
   }
 
+  handleCount = (diff) => {
+    this.setState(prev => {
+      return { count: prev.count + diff};
+    });
+  }
+
   render() {
     return (
       <div className="Counter">
         <p>{this.state.count}</p>
         <div>
-          <button>Down</button>
+          <button onClick={() => this.handleCount(-1)}>Down</button>
           <button onClick={this.handleReset}>Reset</button>
           <button onClick={this.handleUp}>Up</button>
         </div>
