@@ -3,14 +3,28 @@ import './Counter.css';
 
 class Counter extends Component {
 
+  state = {
+    count: 14
+  }
+
+  handleReset = () => {
+    this.setState({ count: 0 });
+  }
+
+  handleUp = () => {
+    this.setState(prev => {
+      return { count: prev.count + 1};
+    });
+  }
+
   render() {
     return (
       <div className="Counter">
-        <p>7</p>
+        <p>{this.state.count}</p>
         <div>
           <button>Down</button>
-          <button>Reset</button>
-          <button>Up</button>
+          <button onClick={this.handleReset}>Reset</button>
+          <button onClick={this.handleUp}>Up</button>
         </div>
       </div>
     )

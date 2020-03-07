@@ -1,0 +1,9 @@
+.Timer {
+  border: 2px solid firebrick;
+  padding: 10px;
+  text-align: center;
+}
+
+.Timer label {
+  font-weight: bold;
+}
