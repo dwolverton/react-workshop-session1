@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Counter.css';
+import Grade from './Grade';
+import PosNegNumber from './PosNegNumber';
 
 class Counter extends Component {
 
@@ -31,7 +33,7 @@ class Counter extends Component {
 
     return (
       <div className={"Counter" + additionClass}>
-        <p>{this.state.count}</p>
+        <PosNegNumber number={this.state.count} />
         <div>
           <button onClick={() => this.handleCount(-1)}>Down</button>
           { this.state.count !== 0 &&
