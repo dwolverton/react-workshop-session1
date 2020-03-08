@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Timer.css';
+import Clock from './Clock';
 
 class Timer extends Component {
 
@@ -41,6 +42,9 @@ class Timer extends Component {
       <div className="Timer">
         <p><label>Start Time:</label> {startTime} </p>
         <p><label>Elapsed</label> {this.state.elapsed}s </p>
+        <p>
+          <Clock seconds={this.state.elapsed} />
+        </p>
         <p>
           { this.state.startTime === null ?
             <button onClick={this.handleStart}>Start</button> :

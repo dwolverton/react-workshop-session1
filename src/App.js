@@ -5,6 +5,7 @@ import Timer from './components/Timer';
 import Contact from './components/Contact';
 import Grade from './components/Grade';
 import Weather from './components/Weather';
+import Clock from './components/Clock';
 
 function App() {
 
@@ -20,6 +21,10 @@ function App() {
 
   return (
     <div className="App">
+      <Clock seconds={0} />
+      <Clock seconds={4} />
+      <Clock seconds={37} />
+
       <Weather conditions="Sunny" highF={59} lowF={38} />
       <Weather conditions="Rainy" highF={55} lowF={40} />
 

@@ -1,0 +1,16 @@
+.Clock {
+  display: inline-block;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  border: 2px solid gray;
+  background-color: #eee;
+}
+
+.Clock__seconds {
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+  border-right: 2px solid firebrick;
+  transform-origin: bottom right;
+}
